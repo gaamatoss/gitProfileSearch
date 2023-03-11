@@ -2,88 +2,128 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  border: none;
+  margin: none;
+  padding: 0;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
+  border: none;
   margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, rgb(79, 79, 79) 5%, transparent 0%),
+    radial-gradient(circle at bottom left, rgb(79, 79, 79) 5%, transparent 0%),
+    radial-gradient(circle at bottom right, rgb(79, 79, 79) 5%, transparent 0%),
+    radial-gradient(circle at top left, rgb(79, 79, 79) 5%, transparent 0%),
+    radial-gradient(circle at top right, rgb(79, 79, 79) 5%, transparent 0%);
+  background-size: 1em 1em;
+  background-color: #3b3b3b;
+  opacity: 1;
+  color: rgb(183, 183, 183);
+}
+.search-section {
+  width: 100%;
+  height: 6em;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.search-input {
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 5px solid rgba(255, 57, 255, 0.2);
+  background-color: rgb(79, 79, 79);
+  margin-right: 5px;
+  padding: 5px;
+  padding-left: 20px;
+  color: white;
+  font-size: 0.96rem;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.search-button {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 5px solid rgba(255, 57, 255, 0.2);
+  background-color: rgb(79, 79, 79);
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 0.9rem;
+  transition: 0.2s ease-in-out;
 }
 
-.card {
-  padding: 2em;
+.search-button:hover {
+  opacity: 0.6;
+}
+.profile-avatar {
+  width: 300px;
+  height: 300px;
+  margin-top: 10px;
+  border-radius: 150px;
+  border: 3px solid rgba(255, 57, 255, 0.2);
+}
+.profileInfo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-header {
+  margin-top: 20px;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #2b2b2b;
+  border-radius: 40px;
+  padding: 20px;
+}
+.cardInfo-section {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 300px 300px;
+  font-size: 1.1rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.repos-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.repos-section ul {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 40% 40%;
+}
+.repo-item {
+  width: 85%;
+  height: 70px;
+  border-radius: 10px;
+  margin: 5px 0px;
+  font-size: 1.3rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  padding: 0px 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2b2b2b;
+}
+.visitRepo-btn {
+  padding: 15px;
+  background-color: #3b3b3b;
+  border: none;
+  border-bottom: 5px solid rgba(255, 57, 255, 0.2);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.visitRepo-btn:hover {
+  opacity: 0.6;
 }
